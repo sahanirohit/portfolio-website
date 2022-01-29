@@ -1,0 +1,29 @@
+@mixin btn {
+  padding: 8px 20px;
+  background: orange;
+  border: none;
+  border-radius: 0;
+  color: white;
+}
+@mixin outline-btn {
+  padding: 8px 20px;
+  background: white;
+  border: 2px solid orange;
+  color: orange;
+  border-radius: 0;
+  transition: 0.3s;
+}
+@mixin outline-hover {
+  background: orange;
+  color: white;
+}
+@mixin line {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 1px;
+  background: orange;
+  position: absolute;
+  left: -13%;
+  top: 50%;
+}
