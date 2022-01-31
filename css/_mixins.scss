@@ -27,3 +27,7 @@
   left: -13%;
   top: 50%;
 }
+@mixin arrow-btn {
+  color: orange !important;
+  font-size: 2rem;
+}

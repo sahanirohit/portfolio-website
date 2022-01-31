@@ -134,6 +134,10 @@ li .active {
           flex-direction: column;
 }
 
+.portfolio__div #portfolio h1 {
+  text-align: center;
+}
+
 .portfolio__div .portfolio_row2 {
   margin-top: 80px;
 }
@@ -189,76 +193,55 @@ li .active {
   color: white;
 }
 
-.portfolio__div .portfolio_row2 .portfolio_col2 .working__experience {
-  width: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
-  text-align: center;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 .portfolio__div .portfolio_row2 .portfolio_col2 .working__experience .col_size {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
-.portfolio__div .portfolio_row2 .portfolio_col2 .working__experience .col_size .numbers {
+.portfolio__div .portfolio_row2 .portfolio_col2 .working__experience .col_size .child {
   width: 80px;
 }
 
-.portfolio__div .portfolio_row2 .portfolio_col2 .working__experience .col_size h1 {
-  text-align: center;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.portfolio__div .portfolio_row2 .portfolio_col2 .working__experience .col_size p {
-  text-align: left;
-  margin: 0 !important;
-  padding: 0 !important;
+.portfolio__div .portfolio_row2 .portfolio_col2 .working__experience .col_size .child:nth-child(odd) {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .services {
-  padding: 80px 0;
+  padding: 40px 0;
+  margin-bottom: 50px;
+  background: #f7f7f7;
 }
 
 .services h1 {
   text-align: center;
+  padding: 40px;
 }
 
-.services .card-body:hover i {
-  opacity: 1;
+.services .card {
+  border: none;
 }
 
-.services .card-body i {
+.services .card-body {
+  padding: 50px;
+}
+
+.services .card-body:hover .card-icon .card_icons {
+  background: orange;
   color: white;
-  padding: 1rem;
-  font-size: 1rem;
-  background: orangered;
-  margin: 10px;
-  opacity: 0.5;
 }
 
-.services .card-body h5 {
-  font-weight: bold;
+.services .card-body p {
+  margin: 25px 0;
 }
 
 .services .card-body .card-icon {
@@ -268,6 +251,144 @@ li .active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.services .card-body .card-icon h3 {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 1.5rem;
+}
+
+.services .card-body .card-icon .card_icons {
+  color: orangered;
+  font-size: 1.5rem;
+  background: #ffdfaf;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services .card-body .arrow_btn i {
+  color: orange !important;
+  font-size: 2rem;
+}
+
+#news {
+  padding: 40px 0;
+}
+
+#news .container {
+  background: #f7f7f7;
+  padding: 40px 0;
+}
+
+#news h1 {
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#news .card {
+  border: none;
+}
+
+#news .card-title {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#news .card-title i {
+  color: orange;
+  font-weight: normal;
+}
+
+#news .card-title i span {
+  color: #bdc7c9;
+  font-size: 1.2rem;
+}
+
+#news .card-text {
+  margin: 25px 0px;
+}
+
+#contact {
+  padding: 40px 0;
+}
+
+#contact .container {
+  padding: 40px 0;
+}
+
+#contact .container h1 {
+  padding-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#contact .container .col-md-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .container .col-md-6 h1 {
+  text-align: left;
+  padding: 0;
+}
+
+#contact .container .col-md-6 .call-btn {
+  padding: 8px 20px;
+  background: orange;
+  border: none;
+  border-radius: 0;
+  color: white;
+  width: 150px;
+}
+
+#contact .container .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f7f7f7;
+  padding: 25px;
+  margin-top: 35px;
+  background: #000;
+  color: white;
+}
+
+#contact .container .contact-form h1 {
+  padding: 10px;
 }
 
 .footer_div {
@@ -326,6 +447,19 @@ li .active {
   color: red;
 }
 
+.copyright {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+}
+
+.copyright p {
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @media screen and (max-width: 992px) {
   .left__content h1 {
     font-size: 2.5rem !important;
@@ -341,6 +475,21 @@ li .active {
   }
   .right__content {
     text-align: center;
+  }
+  .portfolio_col2 {
+    text-align: center;
+  }
+  .portfolio_col2 .promise__content {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .portfolio__div .portfolio_col2 .working__experience .col_size {
+    display: block !important;
+  }
+  .portfolio__div .portfolio_col2 .working__experience .col_size .child {
+    padding: 10px 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */

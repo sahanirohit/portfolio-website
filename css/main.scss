@@ -81,6 +81,11 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  #portfolio {
+    h1 {
+      text-align: center;
+    }
+  }
   .portfolio_row2 {
     margin-top: 80px;
     .portfolio_col2 {
@@ -110,34 +115,18 @@ li {
         }
       }
       .working__experience {
-        width: 100%;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center;
-        margin: 0 !important;
-        padding: 0 !important;
         .col_size {
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
+          flex-wrap: wrap;
           align-items: center;
           text-align: center;
-          margin: 0 !important;
-          padding: 0 !important;
-          .numbers {
+          .child {
             width: 80px;
-          }
-          h1 {
-            text-align: center;
-            margin: 0 !important;
-            padding: 0 !important;
-            // background: red;
-          }
-          p {
-            text-align: left;
-            margin: 0 !important;
-            // background: yellow;
-            padding: 0 !important;
+            &:nth-child(odd) {
+              font-size: 1.5rem;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -147,28 +136,126 @@ li {
 // Services
 
 .services {
-  padding: 80px 0;
+  padding: 40px 0;
+  margin-bottom: 50px;
+  background: $light-bg;
   h1 {
     text-align: center;
+    padding: 40px;
+  }
+  .card {
+    border: none;
   }
   .card-body {
-    &:hover i {
-      opacity: 1;
-    }
-    i {
+    padding: 50px;
+    &:hover .card-icon .card_icons {
+      background: orange;
       color: white;
-      padding: 1rem;
-      font-size: 1rem;
-      background: orangered;
-      margin: 10px;
-      opacity: 0.5;
     }
-    h5 {
-      font-weight: bold;
+    p {
+      margin: 25px 0;
     }
     .card-icon {
       display: flex;
       align-items: center;
+      margin: 0 !important;
+      padding: 0 !important;
+      h3 {
+        font-weight: bold;
+        text-align: left;
+        margin-left: 30px;
+        font-size: 1.5rem;
+      }
+      .card_icons {
+        color: orangered;
+        font-size: 1.5rem;
+        background: #ffdfaf;
+        transition: 0.5s;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .arrow_btn i {
+      @include arrow-btn;
+    }
+  }
+}
+
+// Blogs & News
+
+#news {
+  padding: 40px 0;
+  .container {
+    background: $light-bg;
+    padding: 40px 0;
+  }
+  h1 {
+    padding: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .card {
+    border: none;
+  }
+  .card-title {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    i {
+      color: orange;
+      font-weight: normal;
+      span {
+        color: $grey-text;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .card-text {
+    margin: 25px 0px;
+  }
+}
+
+// Contact Us
+
+#contact {
+  padding: 40px 0;
+  .container {
+    padding: 40px 0;
+    // background: #000;
+    h1 {
+      padding-bottom: 40px;
+      text-align: center;
+      font-weight: bold;
+      // color: white;
+    }
+    .col-md-6 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        text-align: left;
+        padding: 0;
+      }
+      .call-btn {
+        @include btn;
+        width: 150px;
+      }
+    }
+    .contact-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $light-bg;
+      padding: 25px;
+      margin-top: 35px;
+      background: #000;
+      color: white;
+      h1 {
+        padding: 10px;
+      }
     }
   }
 }
@@ -213,6 +300,17 @@ li {
   }
 }
 
+// Copyright
+.copyright {
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  p {
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
 @media screen and (max-width: 992px) {
   .left__content {
     h1 {
@@ -229,5 +327,25 @@ li {
   }
   .right__content {
     text-align: center;
+  }
+  .portfolio_col2 {
+    text-align: center;
+    .promise__content {
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .portfolio__div {
+    .portfolio_col2 {
+      .working__experience {
+        .col_size {
+          display: block !important;
+          .child {
+            padding: 10px 0px;
+          }
+        }
+      }
+    }
   }
 }
