@@ -24,6 +24,7 @@ li {
   margin: 30px 0;
 }
 .hero_section {
+  overflow: hidden !important;
   margin: 50px auto;
   .left__content {
     padding: 20px 0;
@@ -76,6 +77,7 @@ li {
   }
 }
 .portfolio__div {
+  overflow: hidden !important;
   margin-bottom: 80px !important;
   display: flex;
   justify-content: center;
@@ -136,6 +138,7 @@ li {
 // Services
 
 .services {
+  overflow: hidden !important;
   padding: 40px 0;
   margin-bottom: 50px;
   background: $light-bg;
