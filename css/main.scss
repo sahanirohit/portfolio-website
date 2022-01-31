@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .action__button {
   @include btn;
@@ -150,7 +151,29 @@ li {
   h1 {
     text-align: center;
   }
+  .card-body {
+    &:hover i {
+      opacity: 1;
+    }
+    i {
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      background: orangered;
+      margin: 10px;
+      opacity: 0.5;
+    }
+    h5 {
+      font-weight: bold;
+    }
+    .card-icon {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
+
+// Footer
 .footer_div {
   background: #f5f5f5;
   display: flex;

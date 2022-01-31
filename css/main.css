@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .action__button {
@@ -241,6 +242,32 @@ li .active {
 
 .services h1 {
   text-align: center;
+}
+
+.services .card-body:hover i {
+  opacity: 1;
+}
+
+.services .card-body i {
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  background: orangered;
+  margin: 10px;
+  opacity: 0.5;
+}
+
+.services .card-body h5 {
+  font-weight: bold;
+}
+
+.services .card-body .card-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer_div {
